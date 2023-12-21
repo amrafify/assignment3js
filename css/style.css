@@ -1,0 +1,10 @@
+#bgclose {
+  background-color: rgba(4, 4, 4, 0.186);
+}
+body {
+  background-color: #f7ecde;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+}

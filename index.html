@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/all.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="css/style.css" />
+      <title></title>
+    </head>
+  </head>
+  <body>
+    <section class="mb-5 pt-3">
+      <h1 class="text-center">Bookmarks</h1>
+    </section>
+    <div class="container">
+      <form>
+        <label for="bookName" class="fw-bolder"
+          ><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label
+        >
+        <input
+          type="text"
+          class="form-control mb-5"
+          id="bookName"
+          placeholder="Bookmark Name"
+          onkeyup="isValidtext(sitName.value)"
+        />
+        <label for="sitUrl" class="fw-bolder"
+          ><i class="fa-solid fa-link pe-2"></i>Site URL</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="sitUrl"
+          placeholder="Website URL"
+          onkeyup="isValidURL(sitUrl.value)"
+        />
+        <button
+          type="button"
+          onclick="addBook()"
+          class="btn btn-danger w-25 my-5 m-auto"
+          id="submit"
+        >
+          Submit
+        </button>
+      </form>
+      <table
+        class="table table-light table-striped table-bordered text-center table-hover"
+      >
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="myData">
+          <!-- <tr>
+            <td>Sale</td>
+            <td>Goooooooooood</td>
+            <td>
+              <button class="btn btn-warning">
+                <a href="" class="nav-link" target="_blank"
+                  ><i class="fa-solid fa-eye me-2"></i>visit</a
+                >
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-danger">
+                <i class="fa-solid fa-trash-can me-2"></i>Delete
+              </button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="w-100 h-100 position-absolute top-0 d-none"
+      onclick="closebtn()"
+      id="bgclose"
+    ></div>
+    <div
+      class="test w-sm-25 w-md-75 position-absolute translate-middle top-50 start-50 d-none box-conent bg-white p-4 rounded-2 shadow-lg"
+      id="Box"
+    >
+      <button
+        class="border-0 bg-transparent"
+        onclick="closebtn()"
+        id="closebtn"
+      >
+        <i class="fa-solid fa-xmark close fs-3 text-black"></i>
+      </button>
+      <p class="fw-bolder">
+        Site Name or Url is not valid, Please follow the rules below :
+      </p>
+      <ul class="list-unstyled">
+        <li class="text-danger">
+          <i class="fa-regular fa-circle-right p-2 m-0"></i>
+          <span class="fw-bolder"
+            >Site name must contain at least 5 characters</span
+          >
+        </li>
+        <li class="text-primary">
+          <i class="fa-regular fa-circle-right p-2 m-0"></i>
+          <span class="fw-bolder">Site URL must be a valid one</span>
+        </li>
+      </ul>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
