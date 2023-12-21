@@ -65,7 +65,7 @@ function isValidURL(url) {
   }
 }
 function isValidtext(text) {
-  let EXPt = /^[ a-zA-Z 0-9]{5,50}$/;
+  let EXPt = /^[ a-zA-Z0-9]{5,50}$/;
   if (EXPt.test(text)) {
     document.getElementById("bookName").classList.add("is-valid");
     document.getElementById("bookName").classList.remove("is-invalid");
