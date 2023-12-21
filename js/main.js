@@ -52,7 +52,7 @@ function deletbook(x) {
   displaybook();
 }
 function isValidURL(url) {
-  let RegExp = /^(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+  let RegExp = /^((http|https):\/\/)(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
 
   if (RegExp.test(url)) {
     document.getElementById("sitUrl").classList.add("is-valid");
